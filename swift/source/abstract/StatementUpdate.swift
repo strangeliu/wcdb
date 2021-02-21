@@ -33,7 +33,7 @@ public final class StatementUpdate: Statement {
         if conflict != nil {
             description.append("OR \(conflict!.description) ")
         }
-        description.append(table)
+        description.append("\"\(table)\"")
         return self
     }
 

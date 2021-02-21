@@ -34,7 +34,7 @@ public final class StatementCreateTable: Statement {
         if ifNotExists {
             description.append("IF NOT EXISTS ")
         }
-        description.append("\(table) AS \(statementSelect.description)")
+        description.append("\"\(table)\" AS \(statementSelect.description)")
         return self
     }
 
@@ -55,7 +55,7 @@ public final class StatementCreateTable: Statement {
         if ifNotExists {
             description.append("IF NOT EXISTS ")
         }
-        description.append("\(table)(\(columnDefs.joined())")
+        description.append("\"\(table)\"(\(columnDefs.joined())")
         if let tableConstraints = optionalTableConstraints {
             description.append(", \(tableConstraints.joined())")
         }

@@ -31,7 +31,7 @@ public final class Subquery: Describable {
     }
 
     public init(withTable table: String) {
-        description = table
+        description = "\"\(table)\""
     }
 
     @discardableResult

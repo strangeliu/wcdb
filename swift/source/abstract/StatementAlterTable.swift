@@ -30,13 +30,13 @@ public final class StatementAlterTable: Statement {
 
     @discardableResult
     public func alter(table: String) -> StatementAlterTable {
-        description.append("ALTER TABLE \(table)")
+        description.append("ALTER TABLE \"\(table)\"")
         return self
     }
 
     @discardableResult
     public func rename(to newTable: String) -> StatementAlterTable {
-        description.append(" RENAME TO \(newTable)")
+        description.append(" RENAME TO \"\(newTable)\"")
         return self
     }
 

@@ -29,7 +29,7 @@ public final class StatementDelete: Statement {
 
     @discardableResult
     public func delete(fromTable table: String) -> StatementDelete {
-        description.append("DELETE FROM \(table)")
+        description.append("DELETE FROM \"\(table)\"")
         return self
     }
 

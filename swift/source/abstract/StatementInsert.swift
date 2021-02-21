@@ -42,7 +42,7 @@ public final class StatementInsert: Statement {
         if conflict != nil {
             description.append(" OR \(conflict!.description)")
         }
-        description.append(" INTO \(table)")
+        description.append(" INTO \"\(table)\"")
         if columnConvertibleList != nil {
             description.append("(\(columnConvertibleList!.joined()))")
         }

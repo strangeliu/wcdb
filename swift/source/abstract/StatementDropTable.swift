@@ -32,7 +32,7 @@ public final class StatementDropTable: Statement {
         if ifExists {
             description.append("IF EXISTS ")
         }
-        description.append(table)
+        description.append("\"\(table)\"")
         return self
     }
 }

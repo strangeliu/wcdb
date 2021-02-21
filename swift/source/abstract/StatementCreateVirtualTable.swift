@@ -33,7 +33,7 @@ public final class StatementCreateVirtualTable: Statement {
         if ifNotExists {
             description.append("IF NOT EXISTS ")
         }
-        description.append(table)
+        description.append("\"\(table)\"")
         return self
     }
 
