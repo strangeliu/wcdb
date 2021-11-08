@@ -24,7 +24,7 @@ public protocol TokenizerInfoBase: class {
     init(withArgc argc: Int32, andArgv argv: UnsafePointer<UnsafePointer<Int8>?>?)
 }
 
-public protocol CursorInfoBase: class {
+public protocol CursorInfoBase: AnyObject {
     init(withInput pInput: UnsafePointer<Int8>?,
          count: Int32,
          tokenizerInfo: TokenizerInfoBase)
@@ -35,7 +35,7 @@ public protocol CursorInfoBase: class {
               endOffset: inout Int32, position: inout Int32) -> Int32
 }
 
-public protocol ModuleBase: class {
+public protocol ModuleBase: AnyObject {
     static var name: String {get}
 
     static var module: sqlite3_tokenizer_module {get}
