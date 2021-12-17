@@ -20,7 +20,7 @@
 
 import Foundation
 
-public protocol InsertTableInterface: class {
+public protocol InsertTableInterface: AnyObject {
     associatedtype Object: TableEncodable
 
     func insert(objects: Object..., on propertyConvertibleList: [PropertyConvertible]?) throws

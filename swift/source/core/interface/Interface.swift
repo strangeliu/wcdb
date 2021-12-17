@@ -21,7 +21,7 @@
 import Foundation
 
 /// Convenient interface for inserting
-public protocol InsertInterface: class {
+public protocol InsertInterface: AnyObject {
 
     /// Execute inserting with `TableEncodable` object on specific(or all) properties
     ///

@@ -20,7 +20,7 @@
 
 import Foundation
 
-public protocol TokenizerInfoBase: class {
+public protocol TokenizerInfoBase: AnyObject {
     init(withArgc argc: Int32, andArgv argv: UnsafePointer<UnsafePointer<Int8>?>?)
 }
 
